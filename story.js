@@ -3,16 +3,15 @@
 
 var mainStory = {
 
-    start: {
+    start:{
         text:"Sample text",
-        button:[
+        choices:[
             ["choice1", "Yes choice"],
             ["choice2", "No choice option"],
             ["choice3", "Neutral Choice"]
-
         ]
     }
-        
+
 
 };
 
