@@ -2,13 +2,14 @@ body {
     background-color: #484848;
 }
 
-.everything {
+.title-Main {
     margin-top: 100px;
     font-size: 50px;
     color: aliceblue;
     display: flex;
     justify-content: center;
 }
+
 
 #text {
     font-size: 24px;
