@@ -54,6 +54,8 @@ button:hover {
     background: #CF4647;
     color: black;
     width: 350px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .theEndingButton {
@@ -117,5 +119,6 @@ hr {
       }
       100% {
           background: violet;
+          transform: rotate(-720deg);
       }
   }
