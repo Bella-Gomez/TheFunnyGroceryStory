@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 body {
     background-color: #484848;
+}
+
+* {
+    font-family: 'Libre Baskerville', serif;
 }
 
 .title-Main {
@@ -8,6 +13,7 @@ body {
     color: aliceblue;
     display: flex;
     justify-content: center;
+    animation: textColorChanger 6s ease infinite;
 }
 
 
@@ -15,8 +21,8 @@ body {
 #text {
     margin-top: 50px;
     margin-bottom: 25px;
+
     border: 5px solid #CF4647;
-    border-radius: 32px;
     font-size: 24px;
     color: aliceblue;
     text-align: left;
@@ -35,7 +41,7 @@ body {
 
 
 button {
-    font-size: 20px;
+    font-size: 16px;
     width: 300px;
     height: 50px;
     border-radius: 20px;
@@ -121,4 +127,56 @@ hr {
           background: violet;
           transform: rotate(-720deg);
       }
+  }
+
+  @keyframes textColorChanger {
+    0% {
+        color: red;
+    }
+    15% {
+        color: yellow;
+    }
+    30% {
+        color: orange;
+    }
+    45% {
+        color: green;
+    }
+    60% {
+        color: blue;
+    }
+    75% {
+        color: indigo;
+    }
+    90% {
+        color: violet;
+    }
+    100% {
+        color: darkred;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .title-Main {
+        margin-top: 75px;
+        font-size: 25px;
+    }
+    
+    #text {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        border: 5px solid #CF4647;
+        font-size: 12px;
+    }
+    
+    #buttonContainer {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    
+    button {
+        font-size: 16px;
+        width: 300px;
+        height: 50px;
+    }
   }
