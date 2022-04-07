@@ -3,7 +3,8 @@
 window.onload = function() {
     var textFielder = document.getElementById("text");
     var buttonFielder = document.getElementById("buttonContainer");
-    var youLose = document.getElementById("theEnd")
+    var youLose = document.getElementById("theEnd");
+    var youWin = document.getElementById("youWonText");
     var mainStoryStorage = ["start"];
     
     var mainStory = {
@@ -286,7 +287,7 @@ window.onload = function() {
         keepDrivingTheCoolPoliceCar: {
             text: "You keep driving, in desperation on making it to the raid. Some of the civillian cars are moving out of the way for you. You drive fast, while doing so, Eliot Ness is shooting his pistol from the window of the car, in hopes to suppress the hitman. It worked, and you now are in the clear to go to the base. After some time you arrive at the base and a lot of police and agents are here to raid it. This will be a big fight. Everyone, including you and Eliot Ness prepare for the raid. After some time, you enter the base and defeat everyone except Al Capone. After some negotiating Al Capone was arrested. You brought down the biggest Mafia Boss. Now you level up to 100, congratulations, you live your life as a high ranking agent.",
             choices: [
-                [false, ""],
+                [true, ""],
             ]
         },
 
@@ -312,7 +313,7 @@ window.onload = function() {
         },
 
         dontWorkWithEliotNess: {
-            text: "When you peform the cool trick, you get flung backwards through the wall of the police station. Afterwards, you die. The end. That is literally it, you perished by doing a backflip, nice. +1000 style points.",
+            text: "You walk out of the office and proceed to say, \"Yahoo!\". You start to backwards long jump, constantly gaining speed. You have acquired so much speed, you clip out of the police station and go back home. That's it, you finally made it back home, just what you wanted.",
             choices: [
                 [false, ""],
             ]
@@ -333,9 +334,9 @@ window.onload = function() {
         },
 
         dontGiveAlCaponeLoot: {
-            text: "You don't gove the loot to Al Capone, you still are levl 100, now you are more powerful than Al Capone. Al Capone threatens you to give the items to him or else, but you say, \"I won't be giving the loot to you, because a new boss is here\". \"What! No, you can't overthrow me!\" Al Capone says. \"I'm sorry, that's how mafia works, take him away boys\". Since you are level 100, the mafia members see you as the new leader. The mafia members take Al Capone away and convert him to a level 1 gangster. Congratulations you overtook Al Capone's mafia, you are the new mafia boss in charge.",
+            text: "You don't give the loot to Al Capone, you still are levl 100, now you are more powerful than Al Capone. Al Capone threatens you to give the items to him or else, but you say, \"I won't be giving the loot to you, because a new boss is here\". \"What! No, you can't overthrow me!\" Al Capone says. \"I'm sorry, that's how mafia works, take him away boys\". Since you are level 100, the mafia members see you as the new leader. The mafia members take Al Capone away and convert him to a level 1 gangster. Congratulations you overtook Al Capone's mafia, you are the new mafia boss in charge.",
             choices: [
-                [false, ""],
+                [true, ""],
             ]
         },
 
@@ -349,7 +350,7 @@ window.onload = function() {
         donCorleoneMafiaEnding: {
             text: "You agree to get more members. So, you garb money and go out to recruit level 1 and 10 crooks into the Corleone business. It was successful, because of how desperate the crooks were to get a job and level up. After leveling the crooks up Don Corleone was ready to attack Al Capone. The members were mobilized and they all headed towards Al Capone's base. The mafia members of both Al Capone and Don Corleone lined the streets and roads. A little bit after the attack began, it was rough. Both side lot mafia members, but Al Capone was losing more, eventually he gets overwhelmed and surrenders, afterwards he his defeated by Don Corleone and Don Corleone levels up to level 100 Mafia Boss. The victory was great, Don Corleone still kept you appointed as one of his close clients and the Co-owner of the Corleone business. Congratulations you won.",
             choices: [
-                [false, ""],
+                [true, ""],
             ]
         },
 
@@ -377,14 +378,14 @@ window.onload = function() {
         goHomeWithMoneyEnding: {
             text: "No words, you walk out of the building with the money acquired from the box and head home. Nice, you can now live a good life with this amount of money acquired.",
             choices: [
-                [false, ""],
+                [true, ""],
             ]
         },
 
         alcaponeCoolCarForEnd: {
             text: "You proceed to go and use the cool car. You are unsure of how it works. You try to turn on the cool car, but the car starts up by itself. You are spooked by this occurance, the cool car proceeds to drive forward. Unsure of where the cool car will take you, you sit back and watch. Eventually, the car comes to a stop in some open grassy area, no one appears to be in this area other than you and the cool car. You did not intend on leaving the mission from Al Capone, however, you enjoy this.",
             choices: [
-                [false, ""],
+                [true, ""],
             ]
         },
 
@@ -460,13 +461,18 @@ window.onload = function() {
             console.log("Cya");
             youLose.style.display = ""
             }
+
+        if(choiceParts[0] == true ) {
+                console.log("Nice you won");
+                youWin.style.display = ""
+            }
         }
     
     }
     mainStoryMaker();
     
     youLose.addEventListener("click", function(){location.reload(); });
-    youLose.style.display = "none"
-    
+    youLose.style.display = "none";
+    youWin.style.display = "none";
     }
     
