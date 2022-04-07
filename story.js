@@ -1,5 +1,3 @@
-// JavaScript will be written soon.
-// This is ONLY a demo.
 window.onload = function() {
     var textFielder = document.getElementById("text");
     var buttonFielder = document.getElementById("buttonContainer");
