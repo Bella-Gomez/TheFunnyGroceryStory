@@ -22,7 +22,7 @@ window.onload = function() {
                 ["Woo1", "Woah hey 1"],
             ],
         },
-    // Start of the Mafia Story Line
+    // Start of the Mafia/Gangsterism Story Line
         mafiaStart: {
             text: "You take a shortcut through an allyway & see two figures doing something sus",
             choices: [
@@ -429,7 +429,8 @@ window.onload = function() {
         buttons.innerHTML = textForButton;
         buttonFielder.appendChild(buttons);
     
-        buttons.addEventListener("click", function() {mainStoryStorage.push(chosen); mainStoryMaker(); });
+        buttons.addEventListener("click", function() 
+        {mainStoryStorage.push(chosen); mainStoryMaker(); });
     
         if(textForButton == "") {
             console.log("Encountered an Ending")
@@ -463,6 +464,7 @@ window.onload = function() {
         if(choiceParts[0] == true ) {
                 console.log("Nice you won");
                 youWin.style.display = ""
+                youLose.innerHTML = '<img src=""https://static.wikia.nocookie.net/villainsfanon/images/b/ba/LordXIdle.gif/revision/latest/scale-to-width-down/1200?cb=20220224105749>'
             }
         }
     
