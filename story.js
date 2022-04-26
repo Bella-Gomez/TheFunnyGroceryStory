@@ -462,8 +462,8 @@ window.onload = function() {
             }
 
         if(choiceParts[0] == true ) {
-                console.log("Nice you won");
-                youWin.style.display = "";
+            console.log("Nice you won");
+            youWin.style.display = "";
             }
         }
     
