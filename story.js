@@ -458,13 +458,12 @@ window.onload = function() {
     
           if(choiceParts[0] == false ) {
             console.log("Cya");
-            youLose.style.display = ""
+            youLose.style.display = "";
             }
 
         if(choiceParts[0] == true ) {
                 console.log("Nice you won");
-                youWin.style.display = ""
-                youLose.innerHTML = '<img src=""https://static.wikia.nocookie.net/villainsfanon/images/b/ba/LordXIdle.gif/revision/latest/scale-to-width-down/1200?cb=20220224105749>'
+                youWin.style.display = "";
             }
         }
     
