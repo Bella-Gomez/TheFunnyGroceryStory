@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 body {
-    background-color: #484848;
+    background-color: #d3ace7;
 }
 
 * {
@@ -10,32 +10,50 @@ body {
 .title-Main {
     margin-top: 75px;
     font-size: 50px;
-    color: aliceblue;
+    color: #f3c334;
     display: flex;
     justify-content: center;
+    text-shadow: #b35c04 5px 5px 1px;
 }
 
 #text {
     margin-top: 50px;
     margin-bottom: 25px;
-    border: 5px solid #CF4647;
+    border-top: 5px solid #815c8a;
+    border-bottom: 5px solid #815c8a;
     font-size: 24px;
-    color: aliceblue;
-    text-align: left;
+    width: 100%;
+    height: 200px;
+    color: #7c4c7f;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: textup 0.5s ease-in-out;
 }
 
+.replaceAbleText {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    animation: textup 1s ease-in-out;
+}
 
+@keyframes textup {
+    from {
+    opacity: 0;
+    top: -1000px;
+    }
+
+    to {
+    opacity: 1;
+    top: 0;
+    }
+}
 
 #youWonText {
     font-size: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: textColorChanger 6s ease infinite;
+    animation: textColorChanger 6s ease-in-out infinite;
 }
 
 #buttonContainer {
@@ -52,29 +70,33 @@ button {
     height: 50px;
     border-radius: 20px;
     cursor: pointer;
-    border-right: 10px solid grey;
-    border-bottom: 5px solid grey;
+    /* border-right: 10px solid grey;
+    border-bottom: 5px solid grey; */
+    border: none;
     margin-top: 50px;
     margin-left: 25px;
     margin-right: 25px;
-    color: #CF4647;
-    background-color: rgb(44, 43, 43);
+    color: #d3ace7;
+    background-color: #9b45bb;
+    position: relative;
     transition: 0.3s ease 0s;
-    animation: button-fade-in 0.5s ease-in-out;
+    animation: button-fade-in 1s ease-in-out;
 }
 
 @keyframes button-fade-in {
     from {
     opacity: 0;
+    right: 1000px;
     }
     to {
     opacity: 1;
+    right: 0;
     }
 }
 
 button:hover {
-    background: #CF4647;
-    color: black;
+    background: #6C2387;
+    color: #d8b7d7;
     width: 350px;
     margin-left: 0px;
     margin-right: 0px;
@@ -89,15 +111,41 @@ button:hover {
 #theEnd {
     background-color: blue;
     border: none;
-    animation: pulse 6s ease infinite;
+    animation: pulse 6s ease-in-out infinite;
     color: white;    
+}
+
+@keyframes pulse {
+    15% {
+        background: red;
+        transform: rotate(720deg);
+    }
+    30% {
+        background: yellow;
+    }
+    45% {
+        background: orange;
+    }
+    60% {
+        background: green;
+    }
+    75% {
+        background: blue;
+    }
+    90% {
+        background: indigo;
+    }
+    100% {
+        background: violet;
+        transform: rotate(-720deg);
+    }
 }
 
 
 hr {
     width: 200px;
     border-radius: 34px;
-    border: solid #CF4647;
+    border: solid #7c4c7f;
 }
 
 .hr-bottom {
@@ -118,32 +166,6 @@ hr {
       opacity: 0;
     }
   } */
-
-  @keyframes pulse {
-      15% {
-          background: red;
-          transform: rotate(720deg);
-      }
-      30% {
-          background: yellow;
-      }
-      45% {
-          background: orange;
-      }
-      60% {
-          background: green;
-      }
-      75% {
-          background: blue;
-      }
-      90% {
-          background: indigo;
-      }
-      100% {
-          background: violet;
-          transform: rotate(-720deg);
-      }
-  }
 
   @keyframes textColorChanger {
     0% {
@@ -168,7 +190,7 @@ hr {
         color: violet;
     }
     100% {
-        color: darkred;
+        color: red;
     }
 }
 

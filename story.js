@@ -1,21 +1,21 @@
-window.onload = function() {
+window.onload = function () {
     var textFielder = document.getElementById("text");
     var buttonFielder = document.getElementById("buttonContainer");
     var youLose = document.getElementById("theEnd");
     var youWin = document.getElementById("youWonText");
     var mainStoryStorage = ["start"];
-    
+
     var mainStory = {
-    
+
         start: {
             text: "It's a late spring night, you’re walking home after doing some grocery shopping, you stick closely to the street lights not wanting to step into the darkness… You look down and grin at your grocery bags, happy at the thought of a full kitchen. Though you’re still surprised there was a grocery store still open this late, however shady it and its customers were. But hey who are you to complain? They had your favorite snack and you're the one shopping so late. What did you expect? You observe your surroundings as you walk and see an █████ ahead standing and staring at the street light, you freeze. Dangerous creatures those things are, you need to avoid it the best you can. What do you do?",
             choices: [
-                ["lovecraftStart", "Avoid the █████ & find another way home"], 
-                ["literallyLeave", "You just leave"], 
+                ["lovecraftStart", "Avoid the █████ & find another way home"],
+                ["literallyLeave", "You just leave"],
                 ["mafiaStart", "Take short cut home"]
             ]
         },
-    // Start of the Lovecarft story line
+        // Start of the Lovecarft story line
         lovecraftStart: {
             text: "It appeared to be sufficiently distracted, so you moved to the other side of the sidewalk and essentially hugged the building as you walked. While avoiding the █████ , you notice a broken-down but still operational phone booth ahead of you. 'Perhaps I could call someone,' you reason. You begin to walk towards it, but a bus appears across the street as you do so.huh has  that bus always been there??  The bus appears to be waiting, and you have some money left over; maybe you should hop on.",
             choices: [
@@ -25,13 +25,60 @@ window.onload = function() {
         },
 
         susbus: {
-            text: "",
+            text: "You lean forward and look both ways, which is a critical step when crossing the street, and begin walking across the street to the bus. Oh, the lights are still turned on! You tighten your grip on your grocery bag and approach the bus driver. He's scribbling notes on a small notepad as quickly as he can. You decide to simply wait for him to notice you. ... Okay, he's taking too long. You cleared your throat, which draws his attention to you.\"‘Ah, my apologies, do you need a ride home?\" he said, tossing the notepad and pencil over his shoulder.  Kinda  strange to pack items, but alright. \"Yes, sir, I'll be riding to the second stop,\" you replied, setting down a bag to retrieve your wallet. \"All right, the fare is two dollars.\" \"Two dollars?\" you ask yourself.  Two dollars?!  That's a lot! Is it really that expensive to take a bus at night? You're reconsidering your options; do you really want to spend $2 on a short bus ride?",
             choices: [
                 ["pay", "pay up :("],
                 ["donot", "no! I'm not paying that!"],
             ],
         },
 
+        pay: {
+            text: "'It's better than getting mugged,' you reason as you hand over the two dollars. The bus driver examined the bills before tossing them over his shoulder. Your hard-earned two dollars! Why does he keep tossing things over his shoulder?! \"Welcome aboard,\" he says as he walks to the front of the bus to crank the engine.You nod and proceed to walk up the bus steps. As you walk in, you notice a large crowd.As they all stared at you, all conversations came to a halt.You give a small smile, and they soon resume whatever they were doing.It's a little crowded here; perhaps there are some seats available in the back?",
+            choices: [
+                ["busback", "walk to the back of the bus to find a seat"],
+                ["busfront", "try to find a seat in the crowd front"],
+            ],
+        },
+
+        busback: {
+            text: "You push your way to the back of the crowd. Doing everything you can to keep your groceries safe. When you emerge from the crowd, you'll notice that the back of the bus is almost empty. You take a window seat and set your groceries next to you.",
+            choices: [
+                ["lookwindow", "look through the window"],
+                ["lookbus", "look around the bus"],
+            ],
+        },
+
+        lookwindow: {
+            text: "You doubt you'll be able to see much out the window because it's so late, but you look out anyway. When you turn your head, you see a thick layer of flesh-like material, like a spider web, covering the window. It glistens a little in the light of the bus.",
+            choices: [
+                ["touch", "touch it"],
+                ["lookaway", "Look away from the window"],
+            ],
+        },
+
+        touch: {
+            text: "You extend your hand to touch the fleshy film on the window. You run your fingers along it, and the flesh convulses. You quickly pull away as globs of flesh inch away from where you've just touched. Stretching the layer thinner and thinner until it disappears completely, revealing the window behind. Any remaining meat scurry up into the thicker parts of the flesh. The bus then abruptly comes to a halt. The front crowd nearly collapses as everyone is rushed forward. You grab your grocery bags before they fall over, but a milk bottle falls out and disappears under the seats in front of you. Nooo, not your milk :( -1 milk bottleThe bus driver scrambles in, \"WHO– WHO DID THAT!?!\" ",
+            choices: [
+                ["srry", "apologize"],
+                ["notsrry", "Question the bus driver about the bus"],
+            ],
+        },
+
+        busfront: {
+            text: "There was no way you were going to be a part of this sardine can. What if someone attempts to steal some of your groceries? You must protect your groceries!",
+            choices: [
+                ["Woo1", "unfinished"],
+            ],
+        },
+
+        donot: {
+            text: "you get off the bus and head to the phone booth",
+            choices: [
+                ["phonebooth", "Go to the phone booth"],
+                ["Woo1", "unfinished"],
+            ],
+        },
+        
         /*woo1: {
             text: "",
             choices: [
@@ -40,7 +87,7 @@ window.onload = function() {
             ],
         },*/
 
-    // Start of the Mafia/Gangsterism Story Line
+        // Start of the Mafia/Gangsterism Story Line
         mafiaStart: {
             text: "You take a shortcut through an allyway & see two figures doing something sus",
             choices: [
@@ -48,7 +95,7 @@ window.onload = function() {
                 ["investigate", "Investigate"]
             ],
         },
-    
+
         investigate: {
             text: "You get spotted by both the figures. They both appear to be fighting eachother. One starts running at you.",
             choices: [
@@ -264,7 +311,7 @@ window.onload = function() {
             ]
         },
 
-// Don Corleone Route Story Line Start
+        // Don Corleone Route Story Line Start
         grabBoxForSelf: {
             text: "You grab the box and go to an alley way nearby and open it. The box contains money, a lot of it. You level up getting the money. However, you save some of the money for later. Time passes during the day and you decide not to return back to Al Capone, while waking around, you see a little business. You stop and read the sign above, it reads \"Corleone\". Being curious, you walk inside, the inside looks like some sort of waiting lounge. You spot a man, the man is wearing an owl mask. The man sees you, and says,\"Ah, I see you want to become a part of my little organization\". How do you respond.",
             choices: [
@@ -299,7 +346,7 @@ window.onload = function() {
         // Don Corleone Story Line Ending
 
         // All of the endings
-        
+
         keepDrivingTheCoolPoliceCar: {
             text: "You keep driving, in desperation on making it to the raid. Some of the civillian cars are moving out of the way for you. You drive fast, while doing so, Eliot Ness is shooting his pistol from the window of the car, in hopes to suppress the hitman. It worked, and you now are in the clear to go to the base. After some time you arrive at the base and a lot of police and agents are here to raid it. This will be a big fight. Everyone, including you and Eliot Ness prepare for the raid. After some time, you enter the base and defeat everyone except Al Capone. After some negotiating Al Capone was arrested. You brought down the biggest Mafia Boss. Now you level up to 100, congratulations, you live your life as a high ranking agent.",
             choices: [
@@ -383,7 +430,7 @@ window.onload = function() {
                 [false, ""],
             ]
         },
-        
+
         wastedDonCorleonesTime: {
             text: "Don Corleone says, \"Hm, you are not sure, then why did you come here? Just to waste our time, but why?\". Yeah, why did you waste Don Corleone's time, come on, he is such a cool mafia boss.",
             choices: [
@@ -432,7 +479,7 @@ window.onload = function() {
                 [false, ""]
             ]
         },
-    
+
         literallyLeave: {
             text: "Encountered End",
             choices: [
@@ -440,56 +487,56 @@ window.onload = function() {
             ]
         }
     };
-    
-    
+
+
     function buttonMaker(textForButton, chosen) {
         let buttons = document.createElement("button");
         buttons.innerHTML = textForButton;
         buttonFielder.appendChild(buttons);
-    
-        buttons.addEventListener("click", function() 
-        {mainStoryStorage.push(chosen); mainStoryMaker(); });
-    
-        if(textForButton == "") {
+
+        buttons.addEventListener("click", function () { mainStoryStorage.push(chosen); mainStoryMaker(); });
+
+        if (textForButton == "") {
             console.log("Encountered an Ending")
             buttons.style.display = "none"
         }
     }
-    
-    
+
+
     function textMaker(textToAdd) {
-        textFielder.innerHTML = textToAdd;
+        let textContentToBeReplaced = ""
+        textContentToBeReplaced += `<p class="replaceAbleText">` + textToAdd + `<p>`
+        textFielder.innerHTML = textContentToBeReplaced;
     }
-    
-    function mainStoryMaker() { 
+
+    function mainStoryMaker() {
         textFielder.innerHTML = "";
         buttonFielder.innerHTML = "";
-    
-        for(let i of mainStoryStorage) {
-          textMaker(mainStory[i].text);
-          console.log(i);
+
+        for (let i of mainStoryStorage) {
+            textMaker(mainStory[i].text);
+            console.log(i);
         }
-    
+
         for (let choiceParts of mainStory[mainStoryStorage[mainStoryStorage.length - 1]].choices) {
-          buttonMaker(choiceParts[1], choiceParts[0]);
-          console.log(choiceParts);
-    
-          if(choiceParts[0] == false ) {
-            console.log("Cya");
-            youLose.style.display = "";
+            buttonMaker(choiceParts[1], choiceParts[0]);
+            console.log(choiceParts);
+
+            if (choiceParts[0] == false) {
+                console.log("Cya");
+                youLose.style.display = "";
             }
 
-        if(choiceParts[0] == true ) {
-            console.log("Nice you won");
-            youWin.style.display = "";
+            if (choiceParts[0] == true) {
+                console.log("Nice you won");
+                youWin.style.display = "";
             }
         }
-    
+
     }
     mainStoryMaker();
-    
-    youLose.addEventListener("click", function(){location.reload(); });
+
+    youLose.addEventListener("click", function () { location.reload(); });
     youLose.style.display = "none";
     youWin.style.display = "none";
-    }
-    
+}
