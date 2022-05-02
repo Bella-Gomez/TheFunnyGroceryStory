@@ -15,13 +15,31 @@ window.onload = function() {
                 ["mafiaStart", "Take short cut home"]
             ]
         },
-    
+    // Start of the Lovecarft story line
         lovecraftStart: {
-            text: "It seemed distracted enough so you moved over to the other side of the sidewalk and basically hugged the building as you walked. While avoiding the █████ you see a broken down, but still functioning, phone booth ahead of you. ‘Maybe I could call someone’ you think. You start to walk towards it but as you go to walk a bus appears across the street. Huh.. Has that bus always been there?? The bus seems to be waiting and you have some left over money, maybe you should hop on.",
+            text: "It appeared to be sufficiently distracted, so you moved to the other side of the sidewalk and essentially hugged the building as you walked. While avoiding the █████ , you notice a broken-down but still operational phone booth ahead of you. 'Perhaps I could call someone,' you reason. You begin to walk towards it, but a bus appears across the street as you do so.huh has  that bus always been there??  The bus appears to be waiting, and you have some money left over; maybe you should hop on.",
             choices: [
-                ["Woo1", "Woah hey 1"],
+                ["susbus", "Take the sus bus"],
+                ["phonebooth", "Go to the phone booth"],
             ],
         },
+
+        susbus: {
+            text: "",
+            choices: [
+                ["pay", "pay up :("],
+                ["donot", "no! I'm not paying that!"],
+            ],
+        },
+
+        /*woo1: {
+            text: "",
+            choices: [
+                ["Woo1", "Woah hey 1"],
+                ["Woo1", "Woah hey 1"],
+            ],
+        },*/
+
     // Start of the Mafia/Gangsterism Story Line
         mafiaStart: {
             text: "You take a shortcut through an allyway & see two figures doing something sus",

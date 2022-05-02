@@ -25,7 +25,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: textup 0.5s ease-in-out;
 }
+
+
 
 #youWonText {
     font-size: 100px;
@@ -57,6 +60,16 @@ button {
     color: #CF4647;
     background-color: rgb(44, 43, 43);
     transition: 0.3s ease 0s;
+    animation: button-fade-in 0.5s ease-in-out;
+}
+
+@keyframes button-fade-in {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
 }
 
 button:hover {
