@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 body {
     background-color: #d3ace7;
+    /* background-image: url("https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg4OTgzMzgtaW1hZ2Uta3d5bzRxZGcuanBn.jpg"); */
 }
 
 * {
@@ -15,6 +16,7 @@ body {
     justify-content: center;
     text-shadow: #b35c04 5px 5px 1px;
 }
+
 
 #text {
     margin-top: 50px;
@@ -93,6 +95,39 @@ button {
     right: 0;
     }
 }
+
+button:nth-of-type(3)  {
+    animation: button-slide-in 1s ease-in-out;
+}
+
+
+@keyframes button-slide-in {
+    from {
+    opacity: 0;
+    left: 1000px;
+    }
+    to {
+    opacity: 1;
+    left: 0;
+    }
+}
+
+
+button:nth-of-type(2)  {
+    animation: button-slide-middle 1s ease-in-out;
+}
+
+@keyframes button-slide-middle {
+    from {
+    opacity: 0;
+    bottom: -1000px;
+    }
+    to {
+    opacity: 1;
+    bottom: 0;
+    }
+}
+
 
 button:hover {
     background: #6C2387;
