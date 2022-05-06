@@ -12,7 +12,7 @@ window.onload = function () {
             choices: [
                 ["lovecraftStart", "Avoid the █████ & find another way home"],
                 ["literallyLeave", "You just leave"],
-                ["mafiaStart", "Take short cut home"]
+                ["mafiaStart", "Take shortcut home"]
             ]
         },
         // Start of the Lovecarft story line
@@ -492,6 +492,7 @@ window.onload = function () {
     function buttonMaker(textForButton, chosen) {
         let buttons = document.createElement("button");
         buttons.innerHTML = textForButton;
+        buttons.classList.add("progress");
         buttonFielder.appendChild(buttons);
 
         buttons.addEventListener("click", function () { mainStoryStorage.push(chosen); mainStoryMaker(); });
