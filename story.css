@@ -269,26 +269,63 @@ hr {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
     .title-Main {
         margin-top: 75px;
-        font-size: 25px;
+        font-size: 30px;
     }
     
     #text {
         margin-top: 50px;
         margin-bottom: 25px;
-        border: 5px solid #CF4647;
-        font-size: 12px;
+        font-size: 15px;
+        border: none;
     }
     
     #buttonContainer {
-        margin-top: 100px;
+        margin-top: 50px;
         flex-direction: column;
     }
-    .progress    button {
+    .progress {
+        font-size: 16px;
+        width: 350px;
+        height: 50px;
+    }
+
+    #theEnd {
+        background-color: blue;
+        border: none;
         font-size: 16px;
         width: 300px;
         height: 50px;
+        border-radius: 20px;
+        cursor: pointer;
+        animation: none;
+        color: white;    
     }
+
+    .progress {
+        animation: none;
+    }
+
+
+    .progress:nth-of-type(3)  {
+        animation: none;
+    }
+    
+    
+    .progress:nth-of-type(2)  {
+        animation: none;
+    }
+
+    #youWonText {
+        font-size: 30px;
+        animation: textColorChanger 6s ease-in-out infinite;
+    }
+
+    #credits-bottom {
+        margin:25px;
+        flex-direction: column;
+    }
+
   }
